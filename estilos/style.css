@@ -89,8 +89,40 @@ h1 {
 }
 
 .texto {
-    color: hsla(215, 26%, 38%, 0.521);
-}    
+    color: rgb(152, 187, 236);
+    font-size: 16px;
+    line-height: 1.7em;
+    margin-bottom: 20px;
+} 
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.esquerda {
+    display: flex;
+    align-items: center;
+}
+
+.esquerda::before {
+    content: url(../imagens/icon-ethereum.svg);
+    padding-right: 10px;
+}
+
+.direita {
+    display: flex;
+    align-items: center;
+}
+
+.direita::before {
+    content: url(../imagens/icon-clock.svg);
+    padding-right: 10px;
+}
+
 footer {
     display: none;
 }
