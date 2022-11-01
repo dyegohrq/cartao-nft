@@ -52,8 +52,8 @@ main {
     background-color: hsl(216, 50%, 16%);
     border-radius: 10px;
     color: white;
-    width: 290px;
-    height: 563px;
+    width: 257px;
+    height: 500px;
     margin: auto;
     position: absolute;
     top: 50%;
@@ -63,11 +63,34 @@ main {
 }
 
 .foto {
-    background: hsl(217, 54%, 11%) url(../imagens/image-equilibrium.jpg);
-    background-size: cover;
+    position: relative;
+}
+
+.img-card {
+    display: block;
+    width: 100%;
     border-radius: 10px;
-    margin-bottom: 25px;
-    height: 50%;
+}
+
+.card {
+    display: flex;
+    position: absolute;
+    background-color: rgba(0, 255, 247, 0.534);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;    
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity .8s;
+}
+
+.card:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 .conteudo {
@@ -75,7 +98,14 @@ main {
 }
 
 .titulo {
+    margin-top: 25px;
     margin-bottom: 20px;
+    transition: color .4s;
+}
+
+.titulo:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 
 h1 {
@@ -84,7 +114,7 @@ h1 {
 
 .num {
     font-family: 'Outfit', sans-serif;
-    font-weight: 0;
+    font-weight: 600;
     letter-spacing: 1.5px;
 }
 
@@ -106,6 +136,10 @@ ul {
 .esquerda {
     display: flex;
     align-items: center;
+    color: hsl(178, 100%, 50%);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
 }
 
 .esquerda::before {
@@ -116,11 +150,54 @@ ul {
 .direita {
     display: flex;
     align-items: center;
+    font-family: 'Outfit', sans-serif;
+    color: rgb(152, 187, 236);
+    font-size: 15px;
 }
 
 .direita::before {
     content: url(../imagens/icon-clock.svg);
-    padding-right: 10px;
+    padding-right: 7px;
+}
+
+.linha {
+    display: flex;
+    background-color: hsl(215, 29%, 35%);
+    width: auto;
+    height: .5px;
+    margin-bottom: 25px;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.creator > img {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1em;
+    color: hsl(215, 51%, 70%);
+}
+
+h2 > span {
+    color: white;
+    transition: color .4s;
+}
+
+h2 > span:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 
 footer {
